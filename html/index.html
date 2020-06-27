@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Book Store
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="fetchBooks();">
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>ID*</label><label class="validation-error hide" id="IDValidationError">This field is required.</label>
+                        <input type="text" name="ID" id="ID">
+                    </div>
+                    <div>
+                        <label>Title</label>
+                        <input type="text" name="Title" id="Title">
+                    </div>
+                    <div>
+                        <label>Author</label>
+                        <input type="text" name="Author" id="Author">
+                    </div>
+                    <div>
+                        <label>Year</label>
+                        <input type="text" name="Year" id="Year">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="bookList">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
